@@ -1,0 +1,42 @@
+function retornaSoma($a, $b) {
+    return $a + $b;
+}
+
+function retornaSubtracao($a, $b) {
+    return $a - $b;
+}
+
+function retornaMultiplicacao($a, $b) {
+    return $a * $b;
+}
+
+function retornaDivisao($a, $b) {
+    return $a / $b;
+}
+
+function mostraValores($a, $b) {
+    echo "Os valores são: $a e $b" . PHP_EOL;
+}
+
+function mostraOperacao($sinal, $a, $b) {
+    switch ($sinal) {
+        case '+':
+            echo 'Adição: ' . retornaSoma($a, $b) . PHP_EOL;
+            break;
+        case '-':
+            echo 'Subtração: ' . retornaSubtracao($a, $b) . PHP_EOL;
+            break;
+        case '*':
+            echo 'Multiplicação: ' . retornaMultiplicacao($a, $b) . PHP_EOL;
+            break;
+        case '/':
+            echo 'Divisão: ' . retornaDivisao($a, $b) . PHP_EOL;
+            break;
+    }
+}
+
+mostraValores(56, 10);
+mostraOperacao('+', 56, 10);
+mostraOperacao('-', 56, 10);
+mostraOperacao('*', 56, 10);
+mostraOperacao('/', 56, 10);
